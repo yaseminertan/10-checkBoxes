@@ -63,7 +63,29 @@
     }
     input:checked +p{
         text-decoration: line-through;
+        background-color: lightgrey;
     }
 </style>
-<script></script>
+<script>
+    const checkboxes=document.querySelectorAll("input");
+    checkboxes.forEach(check => {
+        check.addEventListener('click',process);
+    });
+
+    let lastChecked;
+    
+
+    function process (e)
+    {
+        let start=false;
+        if(e.shiftKey && this.checked)
+        {
+            checkboxes.forEach(c => {
+                if(c === this || c === lastChecked) start =! start;
+                if (start) c.checked=true;
+            });
+        }
+        lastChecked=this;
+    }
+</script>
 </html>
