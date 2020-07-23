@@ -7,38 +7,60 @@
 </head>
 <body>
     <div id="todos">
+        <p>Examples To Do</p>
         <div class="item">
-            <input type="checkbox">
-                <p></p>
+            <input type="checkbox" class="checkbox">
+                <p>1- Array Exercises</p>
             </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input type="checkbox">
+                <p>2- Loops</p>
+            </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input type="checkbox">
+                <p>3- Decisions</p>
+            </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input type="checkbox">
+                <p>4- Variables</p>
+            </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input type="checkbox">
+                <p>5- Functions</p>
+            </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input type="checkbox">
+                <p>6- Async-Await</p>
+            </input>
         </div>
         <div class="item">
-            <input type="checkbox"></input>
+            <input  type="checkbox">
+                <p>7- Promises</p>
+            </input>
         </div>
     </div>
 </body>
 <style>
     #todos{
+       max-width: 400px;
+       margin: 50px;
+    }
+    .item{
         display: flex;
-        flex: 1;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    }
+    p{
+        margin: 0;
+        padding: 20px;
+        flex: 1;
+    }
+    input:checked +p{
+        text-decoration: line-through;
     }
 </style>
 <script></script>
